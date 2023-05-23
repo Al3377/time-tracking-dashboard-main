@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
@@ -29,8 +35,8 @@
   <body>
     <main>
       <container class="cards">
-        <div class="report">
-          <div class="report__top">
+        <div class="report bo-rad">
+          <div class="report__top bo-rad">
             <div class="profile-img">
               <img src="images/image-jeremy.png" alt="profile pic" />
             </div>
@@ -45,6 +51,26 @@
             <a href="#" class="report__link">Monthly</a>
           </div>
         </div>
+
+        <container class="grid-container">
+          <div class="small-card small-card--work bo-rad">
+            <img src="images/icon-work.svg" alt="work" class="card-icon" />
+
+            <div class="small-card__content bo-rad">
+              <div class="title-icon">
+                <h2>Work</h2>
+                <i
+                  ><img
+                    class="icon"
+                    src="images/icon-ellipsis.svg"
+                    alt="icon-ellipsis"
+                /></i>
+              </div>
+              <p class="time">32hrs</p>
+              <p class="previous-time">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </container>
       </container>
     </main>
 

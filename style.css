@@ -2,12 +2,12 @@
 :root {
   /* Primary: */
   --blue: hsl(246, 80%, 60%);
-  --light-red-work: hsl(15, 100%, 70%);
-  --soft-blue-play: hsl(195, 74%, 62%);
-  --light-red-study: hsl(348, 100%, 68%);
-  --lime-green-exercise: hsl(145, 58%, 55%);
-  --violet-social: hsl(264, 64%, 52%);
-  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
 
   /* Neutral: */
   --very-dark-blue: hsl(226, 43%, 10%);
@@ -31,6 +31,7 @@ body {
 html,
 body {
   height: 100%;
+  font-family: "Rubik", sans-serif;
 }
 
 img,
@@ -44,22 +45,34 @@ a {
   display: block;
 }
 
+/* Centering Main on Screen */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bo-rad {
+  border-radius: 1.3rem;
+}
+
 /* Big report Card */
+/* ------------------------------------------------------------------ */
+/* Container for Report Card */
 .report {
   background-color: var(--dark-blue);
   display: flex;
   flex-direction: column;
-  max-width: 18rem;
-  border-radius: 1.3rem;
+  /* max-width: 18rem; */
 }
+/* ------------------------------------------ */
+/* Top of the Report Card */
 .report__top {
   background-color: var(--blue);
-  border-radius: 1.3rem;
-  padding: 1.8rem;
+  padding: 4rem 1.8rem;
 }
 
 .profile-img {
-  max-width: 50%;
+  max-width: 40%;
   border: 5px solid white;
   border-radius: 50%;
 }
@@ -73,12 +86,67 @@ a {
 }
 .report__name h1 {
   color: var(--pale-blue);
+  font-size: 2.6rem;
+  font-weight: 300;
 }
-
+/* ------------------------------------------- */
+/* Bottom of the Report Card */
 .report__bottom {
   padding: 1.8rem;
 }
 .report__bottom a {
   color: var(--desaturated-blue);
   padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 18px;
+}
+/* --------------------------------------------*/
+/* ------------------------------------------------------------------ */
+.cards {
+  display: flex;
+}
+
+/* Small Card */
+.small-card {
+  /* padding: 3rem 0 0 0; */
+  margin-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  margin-left: auto;
+  width: 30%;
+  margin-right: 0.8rem;
+}
+.small-card--work {
+  background-color: var(--work);
+}
+.small-card__content {
+  background-color: var(--dark-blue);
+  padding: 1.8rem;
+  color: var(--pale-blue);
+  z-index: 100;
+}
+.small-card__content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 1.6rem;
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-right: 4rem;
+  padding-bottom: 0.8rem;
+}
+.previous-time {
+  margin-bottom: 1rem;
+}
+.title-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  display: inline-block;
 }
