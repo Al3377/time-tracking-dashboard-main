@@ -62,13 +62,14 @@ body {
   background-color: var(--dark-blue);
   display: flex;
   flex-direction: column;
+  margin-right: 1.8rem;
   /* max-width: 18rem; */
 }
 /* ------------------------------------------ */
 /* Top of the Report Card */
 .report__top {
   background-color: var(--blue);
-  padding: 4rem 1.8rem;
+  padding: 2.5rem 1.8rem;
 }
 
 .profile-img {
@@ -96,7 +97,7 @@ body {
 }
 .report__bottom a {
   color: var(--desaturated-blue);
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   padding-top: 1rem;
   font-size: 18px;
 }
@@ -109,18 +110,35 @@ body {
 /* Small Card */
 .small-card {
   /* padding: 3rem 0 0 0; */
-  margin-left: 1.8rem;
+  /* margin-left: 1.8rem; */
   display: flex;
   flex-direction: column;
 }
 
 .card-icon {
   margin-left: auto;
-  width: 30%;
   margin-right: 0.8rem;
+  position: relative;
+  top: 20px;
+  max-height: 28%;
 }
 .small-card--work {
   background-color: var(--work);
+}
+.small-card--play {
+  background-color: var(--play);
+}
+.small-card--study {
+  background-color: var(--study);
+}
+.small-card--exercise {
+  background-color: var(--exercise);
+}
+.small-card--social {
+  background-color: var(--social);
+}
+.small-card--self-care {
+  background-color: var(--self-care);
 }
 .small-card__content {
   background-color: var(--dark-blue);
@@ -132,6 +150,7 @@ body {
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 1.6rem;
+  z-index: 1;
 }
 
 .time {
@@ -149,4 +168,11 @@ body {
 }
 .icon {
   display: inline-block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.8rem;
 }
