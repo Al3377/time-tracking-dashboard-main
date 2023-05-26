@@ -50,9 +50,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--very-dark-blue);
 }
+/* Utility */
 .bo-rad {
   border-radius: 1.3rem;
+}
+/* Continer for all cards one Report card and six small cards */
+.cards {
+  display: flex;
+  gap: 1.8rem;
 }
 
 /* Big report Card */
@@ -60,16 +67,16 @@ body {
 /* Container for Report Card */
 .report {
   background-color: var(--dark-blue);
-  display: flex;
-  flex-direction: column;
-  margin-right: 1.8rem;
-  /* max-width: 18rem; */
+  /* display: flex;
+  flex-direction: column; */
+  /* margin-right: 3%; */
+  max-width: 20rem;
 }
 /* ------------------------------------------ */
 /* Top of the Report Card */
 .report__top {
   background-color: var(--blue);
-  padding: 2.5rem 1.8rem;
+  padding: 1.8rem;
 }
 
 .profile-img {
@@ -93,35 +100,88 @@ body {
 /* ------------------------------------------- */
 /* Bottom of the Report Card */
 .report__bottom {
-  padding: 1.8rem;
+  padding: 1rem 1.8rem;
+  padding-bottom: 0;
 }
 .report__bottom a {
   color: var(--desaturated-blue);
-  /* padding-bottom: 1rem; */
   padding-top: 1rem;
   font-size: 18px;
 }
+.report__bottom a:hover {
+  color: var(--pale-blue);
+}
+
 /* --------------------------------------------*/
 /* ------------------------------------------------------------------ */
-.cards {
-  display: flex;
-}
 
-/* Small Card */
+/* Small Cards */
+/* General Small Card Styles */
+/*------------------------------------------------------------------ */
+/* Conatainer for Small Cards */
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.8rem;
+}
+/* -------------------------------------------- */
+
+/* Layout for small card */
 .small-card {
-  /* padding: 3rem 0 0 0; */
-  /* margin-left: 1.8rem; */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+}
+/* -------------------------------------------- */
+/* Dark blue part of small card */
+.small-card__content {
+  background-color: var(--dark-blue);
+  padding: 1rem 1.8rem 0 1.8rem;
+  color: var(--pale-blue);
+  /* ---------------------------------------- */
+  margin-bottom: -0.2rem; /* fixing background color owerflow at the bottom of small card*/
+  /* ----------------------------------------- */
+  z-index: 100;
+}
+.small-card__content:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.small-card__content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 1.4rem;
+  z-index: 100;
 }
 
+.time {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-right: 4rem;
+  padding-bottom: 0.8rem;
+}
+/* -------------------------------------------- */
+/* Icons */
+/* Top of a card icon */
 .card-icon {
   margin-left: auto;
   margin-right: 0.8rem;
   position: relative;
-  top: 20px;
-  max-height: 28%;
+  top: 14px;
 }
+/*  Three dots in line with title of the card */
+.title-icon {
+  display: flex;
+  justify-content: space-between;
+}
+/* .icon--link:hover {
+  cursor: pointer;
+} */
+
+/* -------------------------------------------- */
+
+/* Specific Small Card Styles */
 .small-card--work {
   background-color: var(--work);
 }
@@ -140,39 +200,9 @@ body {
 .small-card--self-care {
   background-color: var(--self-care);
 }
-.small-card__content {
-  background-color: var(--dark-blue);
-  padding: 1.8rem;
-  color: var(--pale-blue);
-  z-index: 100;
-}
-.small-card__content h2 {
-  font-size: 18px;
-  font-weight: 500;
-  padding-bottom: 1.6rem;
-  z-index: 1;
-}
+/* --------------------------------------------------------------- */
+/* media query brakepoints */
 
-.time {
-  font-size: 3rem;
-  font-weight: 300;
-  margin-right: 4rem;
-  padding-bottom: 0.8rem;
-}
-.previous-time {
-  margin-bottom: 1rem;
-}
-.title-icon {
-  display: flex;
-  justify-content: space-between;
-}
-.icon {
-  display: inline-block;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.8rem;
+/* 1. 1200px */
+@media (max-width: 1200px) {
 }
