@@ -59,6 +59,7 @@ body {
 /* Continer for all cards one Report card and six small cards */
 .cards {
   display: flex;
+  flex-direction: row;
   gap: 1.8rem;
 }
 
@@ -67,9 +68,6 @@ body {
 /* Container for Report Card */
 .report {
   background-color: var(--dark-blue);
-  /* display: flex;
-  flex-direction: column; */
-  /* margin-right: 3%; */
   max-width: 20rem;
 }
 /* ------------------------------------------ */
@@ -93,7 +91,7 @@ body {
   color: var(--desaturated-blue);
 }
 .report__name h1 {
-  color: var(--pale-blue);
+  color: white;
   font-size: 2.6rem;
   font-weight: 300;
 }
@@ -205,4 +203,120 @@ body {
 
 /* 1. 1200px */
 @media (max-width: 1200px) {
+  .bo-rad {
+    border-radius: 0.8rem;
+  }
+  /* Continer for all cards one Report card and six small cards */
+  .cards {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  /* Big report Card */
+  /* ------------------------------------------------------------------ */
+  /* Container for Report Card */
+  .report {
+    max-width: 20rem;
+    margin-top: 1.4rem;
+  }
+  /* ------------------------------------------ */
+  /* Top of the Report Card */
+  .report__top {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.4rem;
+  }
+
+  .profile-img {
+    max-width: 40%;
+    border: none;
+    border-radius: 100%;
+  }
+  .profile-img--small {
+    border: 3px solid white;
+    border-radius: 50%;
+    max-width: 80px;
+  }
+
+  .report__name {
+    margin: 1.4rem 0;
+    max-width: 80%;
+  }
+  .report__name p {
+    font-size: 0.8rem;
+  }
+  .report__name h1 {
+    font-size: 1.2rem;
+  }
+  /* ------------------------------------------- */
+  /* Bottom of the Report Card */
+  .report__bottom {
+    padding: 1rem 1.4rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  .report__bottom a {
+    padding-top: 0;
+    font-size: 1rem;
+  }
+
+  /* --------------------------------------------*/
+  /* ------------------------------------------------------------------ */
+
+  /* Small Cards */
+  /* General Small Card Styles */
+  /*------------------------------------------------------------------ */
+  /* Conatainer for Small Cards */
+  .grid-container {
+    /* display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.8rem; */
+    display: flex;
+    flex-direction: column;
+  }
+  /* -------------------------------------------- */
+
+  /* Layout for small card */
+  .small-card {
+    /* display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%; */
+    display: flex;
+    flex-direction: column;
+  }
+  /* -------------------------------------------- */
+  /* Dark blue part of small card */
+  .small-card__content {
+    padding: 0.8rem 1.4rem 0.8rem 1.4rem;
+  }
+
+  .small-card__content h2 {
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+  }
+  .small-card__content p {
+    font-size: 1rem;
+    display: inline-block;
+  }
+
+  .time {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-right: auto;
+    padding-bottom: 0.8rem;
+    padding-right: 2rem;
+  }
+  /* -------------------------------------------- */
+  /* Icons */
+  /* Top of a card icon */
+  .card-icon {
+    max-height: 40px;
+    top: 8px;
+  }
+
+  /* -------------------------------------------- */
+
+  /* --------------------------------------------------------------- */
 }
