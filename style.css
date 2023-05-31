@@ -32,6 +32,11 @@ html,
 body {
   height: 100%;
   font-family: "Rubik", sans-serif;
+  /* Centering Main on Screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
 }
 
 img,
@@ -45,13 +50,6 @@ a {
   display: block;
 }
 
-/* Centering Main on Screen */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--very-dark-blue);
-}
 /* Utility */
 .bo-rad {
   border-radius: 1.3rem;
@@ -88,7 +86,7 @@ body {
   max-width: 80%;
 }
 .report__name p {
-  color: var(--desaturated-blue);
+  color: var(--pale-blue);
 }
 .report__name h1 {
   color: white;
@@ -144,7 +142,6 @@ body {
 }
 .small-card__content:hover {
   opacity: 0.9;
-  cursor: pointer;
 }
 .small-card__content h2 {
   font-size: 18px;
@@ -173,9 +170,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* .icon--link:hover {
-  cursor: pointer;
-} */
 
 /* -------------------------------------------- */
 
@@ -203,6 +197,10 @@ body {
 
 /* 1. 1200px */
 @media (max-width: 1200px) {
+  body {
+    align-items: start;
+  }
+
   .bo-rad {
     border-radius: 0.8rem;
   }
@@ -280,9 +278,6 @@ body {
 
   /* Layout for small card */
   .small-card {
-    /* display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 80%; */
     display: flex;
     flex-direction: column;
   }
